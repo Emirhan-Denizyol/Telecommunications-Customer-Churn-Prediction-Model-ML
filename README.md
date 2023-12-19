@@ -1,3 +1,6 @@
+In this dataset, prediction models were developed for customer abandonment prediction using Logistic Regression, GBM, Random Forest, CART and KNN models.
+
+
 Customer ID: Customer Number
 Gender: Customer's Gender (Male - Female)
 SeniorCitizen: Whether the customer is elderly (0, 1)
