@@ -4,18 +4,14 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import joblib
 import pydotplus
-from sklearn.tree import DecisionTreeClassifier, export_graphviz, export_text
-from sklearn.preprocessing import MinMaxScaler, StandardScaler, RobustScaler
-from sklearn.model_selection import train_test_split, cross_validate, StratifiedKFold, GridSearchCV, validation_curve, RandomizedSearchCV
-from sklearn.linear_model import LinearRegression, LogisticRegression
-from sklearn.metrics import mean_squared_error, accuracy_score, roc_auc_score, confusion_matrix, classification_report, f1_score
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.preprocessing import RobustScaler
+from sklearn.model_selection import train_test_split, cross_validate, StratifiedKFold, GridSearchCV, validation_curve
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score, roc_auc_score, classification_report
 from sklearn.impute import SimpleImputer
 from sklearn.neighbors import KNeighborsClassifier
-from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier, VotingClassifier
-
-from xgboost import XGBClassifier
-from lightgbm import LGBMClassifier
-from catboost import CatBoostClassifier
+from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
 
 import warnings
 warnings.simplefilter(action='ignore', category=Warning)
