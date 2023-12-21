@@ -21,12 +21,17 @@ pd.set_option("display.max_rows", None)
 pd.set_option("display.width", 500)
 pd.set_option("display.float_format", lambda x: '%.3f' % x)
 
+###############################
 # LOAD DATASET
+###############################
+
 df = pd.read_csv("C:/Users/Emirhan Denizyol/PycharmProjects/Telco_Customer_Churn/Dataset/Telco-Customer-Churn.csv")
 df_y = df['Churn']
 df = df.drop(['customerID', 'Churn'], axis=1)
 
+###############################
 # DATA REVIEW
+###############################
 
 print(df.head())
 #    gender  SeniorCitizen Partner Dependents  tenure PhoneService     MultipleLines InternetService OnlineSecurity OnlineBackup DeviceProtection TechSupport StreamingTV StreamingMovies        Contract PaperlessBilling              PaymentMethod  MonthlyCharges TotalCharges
@@ -928,7 +933,9 @@ def value_curve_params(model, X, y, param_name, param_range, scoring="roc_auc", 
 value_curve_params(rf_final, df, df_y, "max_depth", param_range=range(1, 11), scoring="accuracy", cv=10)
 
 
+###################
 # GBM
+###################
 
 gmb_model = GradientBoostingClassifier(random_state=17)
 
